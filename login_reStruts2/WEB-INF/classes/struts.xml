@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <!--在这里设置好每一个Action-->
+    <package name="musicLoRe" extends="struts-default">
+        <action name="login" class="com.music.action.LoginAction">
+            <result name="success">index.jsp</result>
+        </action>
+        <action name="register" class="com.music.action.RegisterAction">
+            <result name="success">login_register.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+    </package>
+</struts>

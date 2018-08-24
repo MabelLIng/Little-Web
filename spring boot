@@ -1,0 +1,15 @@
+ spring boot入门知识点
+1、引入模板引擎，可以使controller直接访问到页面
+先在pom.xml引入
+<!--引入模板引擎-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+
+然后到controller包下的类中插入该方法（该方法为模型），访问 http://localhost:8080/success 会访问到success.html
+@RequestMapping("/success")
+    public String success(){
+//     /main/resources/templates/success.html
+        return "success";
+    }
